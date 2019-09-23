@@ -1,0 +1,11 @@
+name: junkmail
+
+conda_env: conda.yaml
+
+entry_points:
+  # train Keras DL model
+  main:
+    parameters:
+      training_data: {type: string, default: "/root/mlflow/junkmail/train_data"}
+    command: "python train.py --training-data {training_data}"
+
